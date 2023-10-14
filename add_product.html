@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .content {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 82%;
+            height: 100vh;
+        }
+        .name-page {
+            margin: 1rem 0 2rem 1rem;
+        }
+        .name-page img {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        .content h2{
+            text-align: center;
+        }
+        .form_add {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 36rem);
+            gap: 2rem;
+        }
+        .input {
+            align-items: center; 
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+        }
+        .input label {
+            width: 200px;
+            text-align: end;
+            margin-left: 8px;
+        }
+        .input input,select {
+            margin-left:2px;
+            width: 350px;
+        }
+        .content button {
+            font-size: 1rem;
+            position: relative;
+            top: 3rem;
+            left: 45%;
+            margin-left: 10px;
+            color: #ffffff;
+            background-color: #465692;
+            border: 0.5px solid #272626;
+            padding: 2px 5px;
+        }
+        .content .cancel{
+            color: #000000;
+            background-color: #ffffff;
+        }        
+        .content svg {
+            position: relative;
+            bottom: 2px;
+        }
+        .price {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 350px;
+            border: 1px;
+            border-style: solid;
+            border-color: rgb(118, 118, 118), rgb(133, 133, 133);
+        }
+        
+        .price input {
+            border: 1px solid transparent;
+            width: 300px;
+        }
+        .price:focus-within {
+            border: 2px solid black;
+        }
+        .price input:focus{
+            outline: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="name-page">
+            <img src="https://icongr.am/clarity/outdent.svg?size=128&color=currentColor" alt="thu hồi">
+            <p><span class="text-muted">Admin</span>/ Thêm mới</p>
+        </div>
+        <h2>Thêm mới sản phẩm</h2>
+        <form action="" part="" class="form_add">
+            <div class="input g-col-6">
+                <label for="categorys">Loại sản phẩm:</label>
+                <select name="categorys" id="categorys" autofocus>
+                    <option value="">--Hãy chọn một loại sản phẩm--</option>
+                    <option value="Quần">Quần</option>
+                    <option value="Sơ mi">Sơ mi</option>
+                    <option value="Áo polo">Áo polo</option>
+                    <option value="Áo phông">Áo phông</option>
+                </select>
+            </div>
+            <div class="input g-col-6">
+                <label for="price">Giá sản phẩm:</label>
+                <div class="price" style="margin-bottom: 0px;"><input type="text" name="price">VND</div>
+            </div>
+            <div class="input g-col-6">
+                <label for="brands">Hãng sản phẩm:</label>
+                <select name="brands" id="brands">
+                    <option value="">--Hãy chọn một hãng sản phẩm--</option>
+                    <option value="Teelab">Teelab</option>
+                    <option value="Swevn">Swevn</option>
+                    <option value="Roway">Roway</option>
+                    <option value="Levents">Levents</option>
+                </select>
+            </div>
+            <div class="input g-col-6">
+                <label for="nameproduct">Tên sản phẩm:</label>
+                <input type="text" name="nameproduct">
+            </div>
+            <div class="input g-col-6">
+                <label for="speproduct">Tên đặc biệt:</label>
+                <input type="text" name="speproduct">
+            </div>
+            <div class="input g-col-6">
+                <label for="img1">Link ảnh 1:</label>
+                <input type="file" name="img1">
+            </div>
+            <div class="input g-col-6">
+                <label for="img2">Link ảnh 2:</label>
+                <input type="file" name="img2">
+            </div>
+            
+            <div class="input g-col-6">
+                <label for="img">Giãm giá:</label>
+                <input type="file" name="img">
+            </div>
+
+
+            <div class="input g-col-6">
+                <label for="xuatxu">Xuất xứ:</label>
+                <select name="xuatxu" id="xuatxu">
+                    <option value="">--Hãy chọn nơi xuất xứ--</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="ThaiLan">ThaiLan</option>
+                    <option value="USA">USA</option>
+                    <option value="Korea">Korea</option>
+                </select>
+            </div>
+
+            <div class="input g-col-6">
+                <label for="material">Chất liệu:</label>
+                <select name="material" id="material">
+                    <option value="">--Hãy chọn chất liệu sản phẩm--</option>
+                    <option value="Kaki">Kaki</option>
+                    <option value="jean">jean</option>
+                    <option value="len">Len</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Nhung tăm">Nhung tăm</option>
+                    <option value="Lụa">Lụa</option>
+                    <option value="Polyester">Polyester</option>
+                    <option value="Bông">Bông</option>
+                </select>
+            </div>
+            <div class="input g-col-6">
+                <label for="length">Chiều dài:</label>
+                <select name="length" id="length">
+                    <option value="">--Hãy chọn độ dài sản phẩm--</option>
+                    <option value="Tay dài">Tay dài</option>
+                    <option value="Tay ngắn">Tay ngắn</option>
+                    <option value="Quần dài">Quần dài</option>
+                    <option value="Quần ngắn">Quần ngắn</option>
+                </select>
+            </div>
+            <div class="input g-col-6">
+                <label for="color">Màu sắc:</label>
+                <select name="color" id="color">
+                    <option value="">--Chọn màu sắc--</option>
+                    <option value="Đỏ">Đỏ</option>
+                    <option value="Xanh dương">Xanh dương</option>
+                    <option value="Xanh lá cây">Xanh lá cây</option>
+                    <option value="Vàng">Vàng</option>
+                    <option value="Tím">Tím</option>
+                    <option value="Hồng">Hồng</option>
+                    <option value="Cam">Cam</option>
+                    <option value="Nâu">Nâu</option>
+                    <option value="Xám">Xám</option>
+                    <option value="Đen">Đen</option>
+                </select>                     
+            </div>
+        </form>
+        <button class="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h14l2.707 2.707a1 1 0 0 1 .293.707V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 1v5h9V4H7Zm-1 8v7h12v-7H6Zm7-7h2v3h-2V5Z"/></svg>Lưu</button>
+        <button class="cancel" type="reset"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>Hủy</button>
+
+    </div>
+    <!-- <div class="content">
+    </div> -->
+    <script>
+        const select_category = document.getElementById('categorys');
+        const select_meterial = document.getElementById('material');
+        const select_length = document.getElementById('length');
+        // Ẩn select_meterial ban đầu
+        select_meterial.style.display = 'inline';
+
+        select_category.addEventListener('change', function() {
+            if (select_category.value === 'Quần') {
+                // Nếu người dùng chọn "Quần", hiển thị các tùy chọn áo và ẩn các tùy chọn quần
+                select_meterial.style.display = 'inline';
+                select_length.style.display = 'inline';
+
+                // Đặt các tùy chọn quần thành ẩn
+                Array.from(select_meterial.options).forEach(option => {
+                    if (option.value === 'Kaki' || option.value === 'jean' || option.value === 'Len') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+                Array.from(select_length.options).forEach(option => {
+                    if (option.value === 'Quần dài' || option.value === 'Quần ngắn') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+            } else if (select_category.value === 'Sơ mi') {
+                // Nếu người dùng chọn "Sơ mi", hiển thị các tùy chọn quần và ẩn các tùy chọn áo sơ mi
+                select_meterial.style.display = 'inline';
+                // Đặt các tùy chọn áo sơ mi thành ẩn
+                Array.from(select_meterial.options).forEach(option => {
+                    if (option.value === 'Cotton' || option.value === 'Nhung tăm'|| option.value === 'Lụa') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+                Array.from(select_length.options).forEach(option => {
+                    if (option.value === 'Tay dài' || option.value === 'Tay ngắn') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+            } else if (select_category.value === 'Áo polo') {
+                // Nếu người dùng chọn "Áo polo", hiển thị các tùy chọn quần và ẩn các tùy chọn áo polo
+                select_meterial.style.display = 'inline';
+                // Đặt các tùy chọn áo polo thành ẩn
+                Array.from(select_meterial.options).forEach(option => {
+                    if (option.value === 'Polyester' || option.value === 'Cotton') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+                Array.from(select_length.options).forEach(option => {
+                    if (option.value === 'Tay dài' || option.value === 'Tay ngắn') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+            } else if (select_category.value === 'Áo phông') {
+                // Nếu người dùng chọn "Áo phông", hiển thị các tùy chọn quần và ẩn các tùy chọn áo phông
+                select_meterial.style.display = 'inline';
+                // Đặt các tùy chọn áo phông thành ẩn
+                Array.from(select_meterial.options).forEach(option => {
+                    if (option.value === 'Bông' || option.value === 'Lụa' || option.value === 'Cotton') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+                Array.from(select_length.options).forEach(option => {
+                    if (option.value === 'Tay dài' || option.value === 'Tay ngắn') {
+                        option.style.display = 'inline';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+            } else {
+                select_meterial.style.display = 'none'; // Ẩn select_meterial nếu không có lựa chọn hợp lệ
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

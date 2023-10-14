@@ -46,7 +46,7 @@
         }
         .input input,select {
             margin-left:2px;
-            width: 350px;
+            width: 60%;
         }
         .content button {
             font-size: 1rem;
@@ -109,9 +109,12 @@
                     <option value="Áo phông">Áo phông</option>
                 </select>
             </div>
-            <div class="input g-col-6">
-                <label for="price">Giá sản phẩm:</label>
-                <div class="price" style="margin-bottom: 0px;"><input type="text" name="price">VND</div>
+            <div class="input g-col-6" style="display: flex; justify-content: center; align-items: center;margin-left: 28px;">
+                <div style="display: flex; flex-direction: row; width: 88%;">
+                    <label for="price">Giá sản phẩm:</label>
+                    <input type="text" name="price" >
+                </div>
+                <div style="width: 12%;margin-left: 7px;">VND</div>
             </div>
             <div class="input g-col-6">
                 <label for="brands">Hãng sản phẩm:</label>
@@ -141,7 +144,7 @@
             </div>
             
             <div class="input g-col-6">
-                <label for="img">Giãm giá:</label>
+                <label for="img">Giảm giá:</label>
                 <input type="file" name="img">
             </div>
 
@@ -204,10 +207,11 @@
     </div>
     <!-- <div class="content">
     </div> -->
-    <script>
+    <!-- <script>
         const select_category = document.getElementById('categorys');
         const select_meterial = document.getElementById('material');
         const select_length = document.getElementById('length');
+        const conten = document.getElementById('conten');
         // Ẩn select_meterial ban đầu
         select_meterial.style.display = 'inline';
 
@@ -216,7 +220,8 @@
                 // Nếu người dùng chọn "Quần", hiển thị các tùy chọn áo và ẩn các tùy chọn quần
                 select_meterial.style.display = 'inline';
                 select_length.style.display = 'inline';
-
+                conten.style.display = 'inline';
+                conten.style.width = '100%';
                 // Đặt các tùy chọn quần thành ẩn
                 Array.from(select_meterial.options).forEach(option => {
                     if (option.value === 'Kaki' || option.value === 'jean' || option.value === 'Len') {
@@ -291,7 +296,7 @@
             }
         });
 
-    </script>
+    </script> -->
 
 </body>
 

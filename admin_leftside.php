@@ -62,7 +62,7 @@
             align-items: center;
         }
         
-        .left-side-content .nav a:nth-child(4) {
+        .left-side-content .nav a:nth-child(<?php echo $nth ?>) {
             background-color: #a1b1ec;
         }
 
@@ -108,7 +108,7 @@
         <div class="left-side-content">
             <div class="logo">Gen<span class="logo-Z">Z</span></div>
             <div class="nav">
-                <a href="" id="home-link">
+                <a href="admin_home.php" id="home-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 18"><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7H4Z"/></svg>Home</p>
                 </a>
                 <a href="" id="ao-link">
@@ -120,7 +120,7 @@
                             <path fill="currentColor" d="M250.45 19.767c-44.556.187-87.24 7.376-118.562 21c-16.176 147.458-28.792 298.827-46.72 425.75l123.344 24.814l34.157-262.844h20.63l34.25 263.75h.218l129.063-26.28c-15.71-141.714-31.023-283.473-46.724-425.19c-38.697-14.307-85.098-21.17-129.655-21z"/>
                             </svg>Quần</p>
                 </a>
-                <a href="" id="add-link">
+                <a href="admin_add_product.php" id="add-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 19"><path fill="currentColor" d="M12 21v-2.125l5.3-5.3l2.125 2.125l-5.3 5.3H12Zm-9-5v-2h7v2H3Zm17.125-1L18 12.875l.725-.725q.275-.275.7-.275t.7.275l.725.725q.275.275.275.7t-.275.7l-.725.725ZM3 12v-2h11v2H3Zm0-4V6h11v2H3Z"/></svg>Thêm
                         mới
                     </p>
@@ -148,11 +148,12 @@
         </div>
         <div class="name-page">
             <img src="https://icongr.am/clarity/outdent.svg?size=128&color=currentColor" alt="thu hồi">
-            <p>Admin<span id="page-content">/Thêm mới</span></p>
+            <p>Admin<span id="page-content">/<?php echo $content; ?></span></p>
+
         </div>
     </div>
     
-    <script>
+    <!-- <script>
         const pageContent = document.getElementById('page-content');
         const homeLink = document.getElementById('home-link');
         const aoLink = document.getElementById('ao-link');
@@ -202,7 +203,7 @@
             event.preventDefault();
             pageContent.textContent = '/Website GenZ';
         });
-    </script>
+    </script> -->
     
 </body>
 

@@ -1,5 +1,8 @@
 <?php 
-include 'admin_leftside.html';
+$nth = 4;
+$content = "Thêm mới";
+
+include 'admin_leftside.php';
 include 'add_product.html';
 
 // $servername = "localhost";

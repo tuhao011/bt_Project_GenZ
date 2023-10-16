@@ -41,6 +41,7 @@
         .input input,select {
             margin-left:2px;
             width: 350px;
+            flex-direction: column;
         }
         .content button {
             font-size: 1rem;
@@ -82,7 +83,7 @@
             <div class="form_add">
                 <div class="input g-col-6">
                     <label for="categorys">Loại sản phẩm:</label>
-                    <select name="categorys" id="categorys" autofocus>
+                    <select name="categorys" id="categorys" autofocus required>
                         <option value="">--Hãy chọn một loại sản phẩm--</option>
                         <option value="Quần">Quần</option>
                         <option value="Sơ mi">Sơ mi</option>
@@ -92,11 +93,11 @@
                 </div>
                 <div class="input g-col-6">
                     <label for="img1">Link ảnh 1:</label>
-                    <input type="file" name="img1" required>
+                    <input type="file" name="img1" accept="image/png, image/gif, image/jpeg" required>
                 </div>
                 <div class="input g-col-6">
                     <label for="brands">Hãng sản phẩm:</label>
-                    <select name="brands" id="brands">
+                    <select name="brands" id="brands" required>
                         <option value="">--Hãy chọn một hãng sản phẩm--</option>
                         <option value="Teelab">Teelab</option>
                         <option value="Swevn">Swevn</option>
@@ -106,7 +107,7 @@
                 </div>
                 <div class="input g-col-6">
                     <label for="img2">Link ảnh 2:</label>
-                    <input type="file" name="img2" required>
+                    <input type="file" name="img2" accept="image/png, image/gif, image/jpeg" required>
                 </div>
                 <div class="input g-col-6">
                     <label for="nameproduct">Tên sản phẩm:</label>
@@ -114,7 +115,7 @@
                 </div>
                 <div class="input g-col-6">
                     <label for="xuatxu">Xuất xứ:</label>
-                    <select name="xuatxu" id="xuatxu">
+                    <select name="xuatxu" id="xuatxu" required>
                         <option value="">--Hãy chọn nơi xuất xứ--</option>
                         <option value="Vietnam">Vietnam</option>
                         <option value="ThaiLan">ThaiLan</option>
@@ -128,7 +129,7 @@
                 </div>    
                 <div class="input g-col-6">
                     <label for="material">Chất liệu:</label>
-                    <select name="material" id="material">
+                    <select name="material" id="material" required>
                     <option value="">--Hãy chọn chất liệu sản phẩm--</option>
                     <option value="Kaki">Kaki</option>
                     <option value="jean">jean</option>
@@ -143,13 +144,13 @@
                 <div class="input g-col-6" style="display: flex; justify-content: center; align-items: center;margin-left: 28px;">
                     <div style="display: flex; flex-direction: row; width: 88%;">
                     <label for="price">Giá sản phẩm:</label>
-                    <input type="text" name="price" >
+                    <input type="text" name="price" required>
                     </div>
                     <div style="width: 12%;margin-left: 7px;">VND</div>
                 </div>
                 <div class="input g-col-6">
                     <label for="lengthh">Chiều dài:</label>
-                    <select name="length" id="lengthh">
+                    <select name="lengthh" id="lengthh" required>
                         <option value="">--Hãy chọn độ dài sản phẩm--</option>
                         <option value="Tay dài">Tay dài</option>
                         <option value="Tay ngắn">Tay ngắn</option>
@@ -163,7 +164,7 @@
                 </div>
                 <div class="input g-col-6">
                     <label for="color">Màu sắc:</label>
-                    <select name="color" id="color">
+                    <select name="color" id="color" required>
                         <option value="">--Chọn màu sắc--</option>
                         <option value="Đỏ">Đỏ</option>
                         <option value="Xanh dương">Xanh dương</option>
@@ -189,7 +190,7 @@
     <script>
         const select_category = document.getElementById('categorys');
         const select_meterial = document.getElementById('material');
-        const select_length = document.getElementById('length');
+        const select_length = document.getElementById('lengthh');
         // Ẩn select_meterial ban đầu
         select_meterial.style.display = 'inline';
 

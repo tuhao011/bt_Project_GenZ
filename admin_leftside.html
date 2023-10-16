@@ -66,11 +66,11 @@
             background-color: #a1b1ec;
         }
 
-        
         .logo {
             font-size: 50px;
             margin-left: 50px;
             color: #ffffff;
+            text-shadow: 10px 10px 2px 5px rgba(0, 0, 0, 0.9);
         }
         
         .logo-Z {
@@ -82,6 +82,24 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .name-page {
+            margin: 1rem 0 2rem 1rem;
+            position: absolute;
+            top: 3.5rem;
+            left: 16.5rem;
+            width: 200px;
+        }
+        .name-page p {
+            color: #746c6c;
+        }
+        .name-page img {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        .name-page #page-content{
+            color: #000000;
+        }
     </style>
 </head>
 
@@ -90,47 +108,102 @@
         <div class="left-side-content">
             <div class="logo">Gen<span class="logo-Z">Z</span></div>
             <div class="nav">
-                <a href="">
+                <a href="" id="home-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 18"><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7H4Z"/></svg>Home</p>
                 </a>
-                <a href="">
+                <a href="" id="ao-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 50 38"><path fill="currentColor" d="M47.36 14.75c.08.29-.021.61-.19.86l-5.39 8.02c-.2.31-.62.48-.971.48c-.1 0-.38-.02-.489-.05L36 23v19c0 .58-.41 1-1 1H14c-.59 0-1-.42-1-1V23l-3.88 1.07c-.45.14-.84-.04-1.09-.43l-5.35-8c-.17-.26-.22-.55-.14-.84c.07-.3.28-.5.55-.64L14 9h5c.59 0 1 .41 1 1c0 2.06 2.89 3.52 4.95 3.52S30 12.07 30 10c0-.58.41-1 1-1h5l10.8 5.06c.28.14.48.39.56.69z"/></svg>Áo</p>
                 </a>
-                <a href="">
+                <a href="" id="quan-link">
                     <p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 512 450" style="position: relative; top: -3px;">
                             <path fill="currentColor" d="M250.45 19.767c-44.556.187-87.24 7.376-118.562 21c-16.176 147.458-28.792 298.827-46.72 425.75l123.344 24.814l34.157-262.844h20.63l34.25 263.75h.218l129.063-26.28c-15.71-141.714-31.023-283.473-46.724-425.19c-38.697-14.307-85.098-21.17-129.655-21z"/>
                             </svg>Quần</p>
                 </a>
-                <a href="">
+                <a href="" id="add-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 19"><path fill="currentColor" d="M12 21v-2.125l5.3-5.3l2.125 2.125l-5.3 5.3H12Zm-9-5v-2h7v2H3Zm17.125-1L18 12.875l.725-.725q.275-.275.7-.275t.7.275l.725.725q.275.275.275.7t-.275.7l-.725.725ZM3 12v-2h11v2H3Zm0-4V6h11v2H3Z"/></svg>Thêm
                         mới
                     </p>
                 </a>
-                <a href="">
+                <a href="" id="thongke-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 20"><path fill="currentColor" d="M4 19v1h18v2H2V2h2v15c3 0 6-2 8.1-5.6c3-5 6.3-7.4 9.9-7.4v2c-2.8 0-5.5 2.1-8.1 6.5C11.3 16.6 7.7 19 4 19Z"/></svg>Thông
                         kê
                     </p>
                 </a>
-                <a href="">
+                <a href="" id="quanli-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 12 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 1.5H11a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h1.5"/><rect width="5" height="2.5" x="4.5" y=".5" rx="1"/><path d="m4.5 8.5l2 1.5L9 6"/></g></svg>Quản
                         lí đơn hàng</p>
                 </a>
-                <a href="">
+                <a href="" id="account-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 16" style="position: relative; bottom: 8px;"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Tài
                         Khoàn
                     </p>
                 </a>
-                <a href="">
+                <a href="" id="web-link">
                     <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 10" style="position: relative; bottom: 8px;"><path fill="currentColor" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>Website
                         GenZ
                     </p>
                 </a>
             </div>
         </div>
+        <div class="name-page">
+            <img src="https://icongr.am/clarity/outdent.svg?size=128&color=currentColor" alt="thu hồi">
+            <p>Admin<span id="page-content">/Thêm mới</span></p>
+        </div>
     </div>
     
-
+    <script>
+        const pageContent = document.getElementById('page-content');
+        const homeLink = document.getElementById('home-link');
+        const aoLink = document.getElementById('ao-link');
+        const quanLink = document.getElementById('quan-link');
+        const addLink = document.getElementById('add-link');
+        const thongkeLink = document.getElementById('thongke-link');
+        const quanliLink = document.getElementById('quanli-link');
+        const accountLink = document.getElementById('account-link');
+        const webLink = document.getElementById('web-link');
+    
+        homeLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Home';
+        });
+    
+        aoLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Áo';
+        });
+    
+        quanLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Quần';
+        });
+    
+        addLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Thêm mới';
+        });
+    
+        thongkeLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Thông kê';
+        });
+    
+        quanliLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Quản lí đơn hàng';
+        });
+    
+        accountLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Tài Khoản';
+        });
+    
+        webLink.addEventListener('click', function() {
+            event.preventDefault();
+            pageContent.textContent = '/Website GenZ';
+        });
+    </script>
+    
 </body>
 
 </html>

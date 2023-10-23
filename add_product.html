@@ -8,182 +8,123 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-        .content {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 82%;
-            height: 100vh;
-        }
-        
-        .content h2{
-            text-align: center;
-            margin-top: 5rem;
-        }
-        .form_add {
-            margin-top: 3rem;
-            display: grid;
-            grid-template-columns: repeat(2, 36rem);
-            gap: 2rem;
-        }
-        .input {
-            align-items: center; 
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            display: flex;
-        }
-        .input label {
-            width: 200px;
-            text-align: end;
-            margin-left: 8px;
-        }
-        .input input,select {
-            margin-left:2px;
-            width: 350px;
-            flex-direction: column;
-        }
-        .content button {
-            font-size: 1rem;
-            position: relative;
-            top: 3rem;
-            left: 45%;
-            margin-left: 10px;
-            color: #ffffff;
-            background-color: #465692;
-            border: 0.5px solid #272626;
-            padding: 2px 5px;
-        }
-        .content .cancel{
-            color: #000000;
-            background-color: #ffffff;
-        }        
-        .content svg {
-            position: relative;
-            bottom: 2px;
-        }
-        .price {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 350px;
-            border: 1px;
-            border-style: solid;
-            border-color: rgb(158, 157, 157), rgb(154, 152, 152);
-        }
+    <link rel="stylesheet" href="add_product.css">
+    <link rel="stylesheet" href="add_prodict.js">
 
-        
-    </style>
 </head>
 
 <body>
-    <div class="content">
-        <h2>Thêm mới sản phẩm</h2>
-        <form action="add_product.php" method="post" enctype="multipart/form-data">
-            <div class="form_add">
-                <div class="input g-col-6">
-                    <label for="categorys">Loại sản phẩm:</label>
-                    <select name="categorys" id="categorys" autofocus required>
-                        <option value="">--Hãy chọn một loại sản phẩm--</option>
-                        <option value="Quần">Quần</option>
-                        <option value="Sơ mi">Sơ mi</option>
-                        <option value="Áo polo">Áo polo</option>
-                        <option value="Áo phông">Áo phông</option>
-                    </select>
-                </div>
-                <div class="input g-col-6">
-                    <label for="img1">Link ảnh 1:</label>
-                    <input type="file" name="img1" accept="image/png, image/gif, image/jpeg" required>
-                </div>
-                <div class="input g-col-6">
-                    <label for="brands">Hãng sản phẩm:</label>
-                    <select name="brands" id="brands" required>
-                        <option value="">--Hãy chọn một hãng sản phẩm--</option>
-                        <option value="Teelab">Teelab</option>
-                        <option value="Swevn">Swevn</option>
-                        <option value="Roway">Roway</option>
-                        <option value="Levents">Levents</option>
-                    </select>
-                </div>
-                <div class="input g-col-6">
-                    <label for="img2">Link ảnh 2:</label>
-                    <input type="file" name="img2" accept="image/png, image/gif, image/jpeg" required>
-                </div>
-                <div class="input g-col-6">
-                    <label for="nameproduct">Tên sản phẩm:</label>
-                    <input type="text" name="nameproduct" required>
-                </div>
-                <div class="input g-col-6">
-                    <label for="xuatxu">Xuất xứ:</label>
-                    <select name="xuatxu" id="xuatxu" required>
-                        <option value="">--Hãy chọn nơi xuất xứ--</option>
-                        <option value="Vietnam">Vietnam</option>
-                        <option value="ThaiLan">ThaiLan</option>
-                        <option value="USA">USA</option>
-                        <option value="Korea">Korea</option>
-                    </select>
-                </div>
-                <div class="input g-col-6">
-                    <label for="specproduct">Tên đặc biệt:</label>
-                    <input type="text" name="specproduct" required>
-                </div>    
-                <div class="input g-col-6">
-                    <label for="material">Chất liệu:</label>
-                    <select name="material" id="material" required>
-                    <option value="">--Hãy chọn chất liệu sản phẩm--</option>
-                    <option value="Kaki">Kaki</option>
-                    <option value="jean">jean</option>
-                    <option value="len">Len</option>
-                    <option value="Cotton">Cotton</option>
-                    <option value="Nhung tăm">Nhung tăm</option>
-                    <option value="Lụa">Lụa</option>
-                    <option value="Polyester">Polyester</option>
-                    <option value="Bông">Bông</option>
-                    </select>
-                </div>
-                <div class="input g-col-6" style="display: flex; justify-content: center; align-items: center;margin-left: 28px;">
-                    <div style="display: flex; flex-direction: row; width: 88%;">
-                    <label for="price">Giá sản phẩm:</label>
-                    <input type="text" name="price" required>
+    <div class="add_product">
+        <div class="content">
+            <h2>Thêm mới sản phẩm</h2>
+            <form action="add_product.php" method="post" enctype="multipart/form-data">
+                <div class="form_add">
+                    <div class="input g-col-6">
+                        <label for="categorys">Loại sản phẩm:</label>
+                        <select name="categorys" id="categorys" autofocus required>
+                            <option value="">--Hãy chọn một loại sản phẩm--</option>
+                            <option value="Quần">Quần</option>
+                            <option value="Sơ mi">Sơ mi</option>
+                            <option value="Áo polo">Áo polo</option>
+                            <option value="Áo phông">Áo phông</option>
+                        </select>
                     </div>
-                    <div style="width: 12%;margin-left: 7px;">VND</div>
+                    <div class="input g-col-6">
+                        <label for="img1">Link ảnh 1:</label>
+                        <input type="file" name="img1" accept="image/png, image/gif, image/jpeg" required>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="brands">Hãng sản phẩm:</label>
+                        <select name="brands" id="brands" required>
+                            <option value="">--Hãy chọn một hãng sản phẩm--</option>
+                            <option value="Teelab">Teelab</option>
+                            <option value="Swevn">Swevn</option>
+                            <option value="Roway">Roway</option>
+                            <option value="Levents">Levents</option>
+                        </select>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="img2">Link ảnh 2:</label>
+                        <input type="file" name="img2" accept="image/png, image/gif, image/jpeg" required>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="nameproduct">Tên sản phẩm:</label>
+                        <input type="text" name="nameproduct" required>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="xuatxu">Xuất xứ:</label>
+                        <select name="xuatxu" id="xuatxu" required>
+                            <option value="">--Hãy chọn nơi xuất xứ--</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="ThaiLan">ThaiLan</option>
+                            <option value="USA">USA</option>
+                            <option value="Korea">Korea</option>
+                        </select>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="specproduct">Tên đặc biệt:</label>
+                        <input type="text" name="specproduct" required>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="material">Chất liệu:</label>
+                        <select name="material" id="material" required>
+                        <option value="">--Hãy chọn chất liệu sản phẩm--</option>
+                        <option value="Kaki">Kaki</option>
+                        <option value="jean">jean</option>
+                        <option value="len">Len</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Nhung tăm">Nhung tăm</option>
+                        <option value="Lụa">Lụa</option>
+                        <option value="Polyester">Polyester</option>
+                        <option value="Bông">Bông</option>
+                        </select>
+                    </div>
+                    <div class="input g-col-6" style="display: flex; justify-content: center; align-items: center;margin-left: 28px;">
+                        <div style="display: flex; flex-direction: row; width: 88%;">
+                            <label for="price">Giá sản phẩm:</label>
+                            <input type="text" name="price" required>
+                        </div>
+                        <div style="width: 12%;margin-left: 7px;">VND</div>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="lengthh">Chiều dài:</label>
+                        <select name="lengthh" id="lengthh" required>
+                            <option value="">--Hãy chọn độ dài sản phẩm--</option>
+                            <option value="Tay dài">Tay dài</option>
+                            <option value="Tay ngắn">Tay ngắn</option>
+                            <option value="Quần dài">Quần dài</option>
+                            <option value="Quần ngắn">Quần ngắn</option>
+                        </select>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="promotion">Giảm giá:</label>
+                        <input type="text" name="promotion" required>
+                    </div>
+                    <div class="input g-col-6">
+                        <label for="color">Màu sắc:</label>
+                        <select name="color" id="color" required>
+                            <option value="">--Chọn màu sắc--</option>
+                            <option value="Đỏ">Đỏ</option>
+                            <option value="Xanh dương">Xanh dương</option>
+                            <option value="Xanh lá cây">Xanh lá cây</option>
+                            <option value="Vàng">Vàng</option>
+                            <option value="Tím">Tím</option>
+                            <option value="Hồng">Hồng</option>
+                            <option value="Cam">Cam</option>
+                            <option value="Nâu">Nâu</option>
+                            <option value="Xám">Xám</option>
+                            <option value="Đen">Đen</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="input g-col-6">
-                    <label for="lengthh">Chiều dài:</label>
-                    <select name="lengthh" id="lengthh" required>
-                        <option value="">--Hãy chọn độ dài sản phẩm--</option>
-                        <option value="Tay dài">Tay dài</option>
-                        <option value="Tay ngắn">Tay ngắn</option>
-                        <option value="Quần dài">Quần dài</option>
-                        <option value="Quần ngắn">Quần ngắn</option>
-                    </select>
+                <div class="bot">
+                    <button class="submit" type="submit" name="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h14l2.707 2.707a1 1 0 0 1 .293.707V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 1v5h9V4H7Zm-1 8v7h12v-7H6Zm7-7h2v3h-2V5Z"/></svg>Lưu</button>
+                    <button class="cancel" type="reset"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>Hủy</button>
                 </div>
-                <div class="input g-col-6">
-                    <label for="promotion">Giảm giá:</label>
-                    <input type="text" name="promotion" required>
-                </div>
-                <div class="input g-col-6">
-                    <label for="color">Màu sắc:</label>
-                    <select name="color" id="color" required>
-                        <option value="">--Chọn màu sắc--</option>
-                        <option value="Đỏ">Đỏ</option>
-                        <option value="Xanh dương">Xanh dương</option>
-                        <option value="Xanh lá cây">Xanh lá cây</option>
-                        <option value="Vàng">Vàng</option>
-                        <option value="Tím">Tím</option>
-                        <option value="Hồng">Hồng</option>
-                        <option value="Cam">Cam</option>
-                        <option value="Nâu">Nâu</option>
-                        <option value="Xám">Xám</option>
-                        <option value="Đen">Đen</option>
-                    </select>      
-                </div>
-            </div>
-            <button class="submit" type="submit" name="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h14l2.707 2.707a1 1 0 0 1 .293.707V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 1v5h9V4H7Zm-1 8v7h12v-7H6Zm7-7h2v3h-2V5Z"/></svg>Lưu</button>
-            <button class="cancel" type="reset"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/></svg>Hủy</button>
 
-        </form>
-        
+
+            </form>
+        </div>
     </div>
     <!-- <div class="content">
     </div> -->
@@ -220,7 +161,7 @@
                 select_meterial.style.display = 'inline';
                 // Đặt các tùy chọn áo sơ mi thành ẩn
                 Array.from(select_meterial.options).forEach(option => {
-                    if (option.value === 'Cotton' || option.value === 'Nhung tăm'|| option.value === 'Lụa') {
+                    if (option.value === 'Cotton' || option.value === 'Nhung tăm' || option.value === 'Lụa') {
                         option.style.display = 'inline';
                     } else {
                         option.style.display = 'none';
@@ -273,7 +214,6 @@
                 select_meterial.style.display = 'none'; // Ẩn select_meterial nếu không có lựa chọn hợp lệ
             }
         });
-
     </script>
 
 </body>

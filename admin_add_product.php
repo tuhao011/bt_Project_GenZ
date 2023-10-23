@@ -2,22 +2,30 @@
 $nth = 4;
 $content = "Thêm mới";
 
-include 'admin_leftside.php';
 include 'add_product.html';
+include 'admin_leftside.php';
 
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $database = "product"
 
-// // Create connection
-// $conn = mysqli_connect($servername, $username, $password, $database);
+    
+ ?>
+<!-- <script src="add_product.js"></script> -->
+<script>
+    const open = document.querySelector('.name-page');
+    const leftside = document.querySelector('.left-side');
+    const add_product = document.querySelector('.add_product');
 
-// // Check connection
-// if (!$conn) {
-//   die("Connection failed: " . mysqli_connect_error());
-// }
-// echo "Connected successfully";
-
-// ?>
+    function myFunction() {
+        if (leftside.classList.contains('left-side') && add_product.classList.contains('add_product')) {
+            leftside.classList.remove('left-side');
+            leftside.classList.add('left-side-short');
+            add_product.classList.remove('add_product');
+            add_product.classList.add('add_product_max');
+        } else {
+            leftside.classList.remove('left-side-short');
+            leftside.classList.add('left-side');
+            add_product.classList.remove('add_product_max');
+            add_product.classList.add('add_product');
+        }
+    }
+</script>
 

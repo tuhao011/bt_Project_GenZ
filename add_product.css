@@ -1,0 +1,86 @@
+.add_product {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 84%;
+    height: 100vh;
+}
+
+.add_product_max {
+    position: absolute;
+    left: 10rem;
+    top: 0;
+    width: 90%;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+}
+
+.content h2 {
+    text-align: center;
+    margin-top: 5rem;
+    display: block;
+}
+
+.form_add {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 36rem);
+    gap: 2rem 8rem;
+    font-size: 6rem;
+}
+
+.input {
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.input label {
+    width: 200px;
+    text-align: end;
+    margin-left: 8px;
+    size: 2rem;
+}
+
+.input input,
+select {
+    margin-left: 2px;
+    width: 350px;
+    flex-direction: column;
+}
+
+.content button {
+    font-size: 1rem;
+    position: relative;
+    top: 3rem;
+    left: 45%;
+    margin-left: 10px;
+    color: #ffffff;
+    background-color: #465692;
+    border: 0.5px solid #272626;
+    padding: 2px 5px;
+}
+
+.content .cancel {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.content svg {
+    position: relative;
+    bottom: 2px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(158, 157, 157), rgb(154, 152, 152);
+}

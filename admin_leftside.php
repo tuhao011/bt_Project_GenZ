@@ -7,98 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Zilla_Slab' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="admin_leftside.css">
+    <link rel="stylesheet" href="add_product.js">
     <style>
-
-        .left-side {
-            background-color: #465692;
-            width: 18%;
-            height: 100vh;
-            left: 0px;
-            top: 0px;
-            position: fixed;
-        }
-        
-        .left-side-content {
-            width: 250px;
-            margin-left: 20px;
-            color: #ffffff;
-        }
-        
-        .left-side-content.logo {
-            font-size: 4rem;
-            padding: 20px 30px;
-            font-family: Titillium Web;
-        }
-        
-        .left-side-content .nav {
-            margin-top: 20px;
-            position: absolute;
-            left: 0;
-            line-height: 30px;
-        }
-        
-        .left-side-content a {
-            text-decoration: none;
-            color: #ffffff;
-            display: block;
-            padding: 5px 24px 5px 20px;
-            width: 100%;
-        }
-        
-        .left-side-content svg {
-            justify-content: center;
-            margin-right: 7px;
-            color: #000000;
-            padding: 0 auto;
-            position: relative;
-            bottom: 6px;
-        }
-        
-        .left-side-content p {
-            padding: 7px 0px 7px 20px;
-            font-size: 1.2rem;
-            margin: 0;
-            align-items: center;
-        }
-        
-        .left-side-content .nav a:nth-child(<?php echo $nth ?>) {
-            background-color: #a1b1ec;
-        }
-
-        .logo {
-            font-size: 50px;
-            margin-left: 50px;
-            color: #ffffff;
-            text-shadow: 10px 10px 2px 5px rgba(0, 0, 0, 0.9);
-        }
-        
-        .logo-Z {
-            position: relative;
-            top: 12px;
-            bottom: 10px;
-            font-size: 5rem;
-            background: linear-gradient(0, #ffffff,#000000);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .name-page {
-            margin: 1rem 0 2rem 1rem;
-            position: absolute;
-            top: 3.5rem;
-            left: 16.5rem;
-            width: 200px;
-        }
-        .name-page p {
-            color: #746c6c;
-        }
-        .name-page img {
-            width: 20px;
-            height: 20px;
-            margin-bottom: 10px;
-        }
-        .name-page #page-content{
-            color: #000000;
+        .left-side-content .nav a:nth-child(<?php echo $nth ?> ) {
+            background-color: rgba(255,255,255,0.4);
         }
     </style>
 </head>
@@ -106,105 +21,50 @@
 <body>
     <div class="left-side">
         <div class="left-side-content">
-            <div class="logo">Gen<span class="logo-Z">Z</span></div>
+            <div class="LOGO"><div class="logo">GEN<span class="logo-Z">Z</span></div></div>
             <div class="nav">
                 <a href="admin_home.php" id="home-link">
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 18"><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7H4Z"/></svg>Home</p>
+                    <div class="ha">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 18"><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7H4Z"/></svg>
+                        <p class="hi">Home</p>
+                    </div>   
                 </a>
                 <a href="" id="ao-link">
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 50 38"><path fill="currentColor" d="M47.36 14.75c.08.29-.021.61-.19.86l-5.39 8.02c-.2.31-.62.48-.971.48c-.1 0-.38-.02-.489-.05L36 23v19c0 .58-.41 1-1 1H14c-.59 0-1-.42-1-1V23l-3.88 1.07c-.45.14-.84-.04-1.09-.43l-5.35-8c-.17-.26-.22-.55-.14-.84c.07-.3.28-.5.55-.64L14 9h5c.59 0 1 .41 1 1c0 2.06 2.89 3.52 4.95 3.52S30 12.07 30 10c0-.58.41-1 1-1h5l10.8 5.06c.28.14.48.39.56.69z"/></svg>Áo</p>
+                    <div class="ha">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 50 38"><path fill="currentColor" d="M47.36 14.75c.08.29-.021.61-.19.86l-5.39 8.02c-.2.31-.62.48-.971.48c-.1 0-.38-.02-.489-.05L36 23v19c0 .58-.41 1-1 1H14c-.59 0-1-.42-1-1V23l-3.88 1.07c-.45.14-.84-.04-1.09-.43l-5.35-8c-.17-.26-.22-.55-.14-.84c.07-.3.28-.5.55-.64L14 9h5c.59 0 1 .41 1 1c0 2.06 2.89 3.52 4.95 3.52S30 12.07 30 10c0-.58.41-1 1-1h5l10.8 5.06c.28.14.48.39.56.69z"/></svg>
+                        <p class="hi">Áo</p>
+                    </div>   
                 </a>
                 <a href="" id="quan-link">
-                    <p>
+                    <div class="ha">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 512 450" style="position: relative; top: -3px;">
                             <path fill="currentColor" d="M250.45 19.767c-44.556.187-87.24 7.376-118.562 21c-16.176 147.458-28.792 298.827-46.72 425.75l123.344 24.814l34.157-262.844h20.63l34.25 263.75h.218l129.063-26.28c-15.71-141.714-31.023-283.473-46.724-425.19c-38.697-14.307-85.098-21.17-129.655-21z"/>
-                            </svg>Quần</p>
+                            </svg><p class="hi">Quần</p>
+                    </div>
                 </a>
                 <a href="admin_add_product.php" id="add-link">
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 19"><path fill="currentColor" d="M12 21v-2.125l5.3-5.3l2.125 2.125l-5.3 5.3H12Zm-9-5v-2h7v2H3Zm17.125-1L18 12.875l.725-.725q.275-.275.7-.275t.7.275l.725.725q.275.275.275.7t-.275.7l-.725.725ZM3 12v-2h11v2H3Zm0-4V6h11v2H3Z"/></svg>Thêm
-                        mới
-                    </p>
+                    <div class="ha"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 12 16"><path fill="currentColor" d="M3 10h11v2H3v-2zm0-2h11V6H3v2zm0 8h7v-2H3v2zm15.01-3.13l.71-.71a.996.996 0 0 1 1.41 0l.71.71c.39.39.39 1.02 0 1.41l-.71.71l-2.12-2.12zm-.71.71l-5.3 5.3V21h2.12l5.3-5.3l-2.12-2.12z"/></svg><p class="hi">Thêm mới</p></div>
                 </a>
                 <a href="" id="thongke-link">
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 20"><path fill="currentColor" d="M4 19v1h18v2H2V2h2v15c3 0 6-2 8.1-5.6c3-5 6.3-7.4 9.9-7.4v2c-2.8 0-5.5 2.1-8.1 6.5C11.3 16.6 7.7 19 4 19Z"/></svg>Thông
-                        kê
-                    </p>
+                    <div class="ha"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 20"><path fill="currentColor" d="M4 19v1h18v2H2V2h2v15c3 0 6-2 8.1-5.6c3-5 6.3-7.4 9.9-7.4v2c-2.8 0-5.5 2.1-8.1 6.5C11.3 16.6 7.7 19 4 19Z"/></svg><p class="hi">Thông kê</p></div>
                 </a>
                 <a href="" id="quanli-link">
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 12 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 1.5H11a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h1.5"/><rect width="5" height="2.5" x="4.5" y=".5" rx="1"/><path d="m4.5 8.5l2 1.5L9 6"/></g></svg>Quản
-                        lí đơn hàng</p>
+                    <div class="ha"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 20"><path fill="currentColor" d="M19 2h-4.18C14.4.84 13.3 0 12 0S9.6.84 9.18 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1zm7 18H5V4h2v3h10V4h2v16z"/></svg><p class="hi">Quản lí đơn</p></div>
                 </a>
                 <a href="" id="account-link">
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 24 16" style="position: relative; bottom: 8px;"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Tài
-                        Khoàn
-                    </p>
+                    <div class="ha"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 18" style="position: relative; bottom: 8px;"><path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg><p class="hi">Tài Khoản</p></div>
                 </a>
                 <a href="" id="web-link">
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 10" style="position: relative; bottom: 8px;"><path fill="currentColor" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>Website
-                        GenZ
-                    </p>
+                    <div class="ha"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 10" style="position: relative; bottom: 8px;"><path fill="currentColor" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg><p class="hi">Website GenZ</p></div>
                 </a>
             </div>
         </div>
-        <div class="name-page">
+        <div class="name-page" onclick="myFunction()">
             <img src="https://icongr.am/clarity/outdent.svg?size=128&color=currentColor" alt="thu hồi">
             <p>Admin<span id="page-content">/<?php echo $content; ?></span></p>
 
         </div>
     </div>
-    
-    <!-- <script>
-        const pageContent = document.getElementById('page-content');
-        const homeLink = document.getElementById('home-link');
-        const aoLink = document.getElementById('ao-link');
-        const quanLink = document.getElementById('quan-link');
-        const addLink = document.getElementById('add-link');
-        const thongkeLink = document.getElementById('thongke-link');
-        const quanliLink = document.getElementById('quanli-link');
-        const accountLink = document.getElementById('account-link');
-        const webLink = document.getElementById('web-link');
-    
-        homeLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Home';
-        });
-    
-        aoLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Áo';
-        });
-    
-        quanLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Quần';
-        });
-    
-        addLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Thêm mới';
-        });
-    
-        thongkeLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Thông kê';
-        });
-    
-        quanliLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Quản lí đơn hàng';
-        });
-    
-        accountLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Tài Khoản';
-        });
-    
-        webLink.addEventListener('click', function() {
-            event.preventDefault();
-            pageContent.textContent = '/Website GenZ';
-        });
-    </script> -->
-    
 </body>
 
 </html>
